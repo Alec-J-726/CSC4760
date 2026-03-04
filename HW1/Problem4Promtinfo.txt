@@ -1,0 +1,13 @@
+LLM environment
+LLM: ChatGPT, GPT‑5.1 (OpenAI)
+
+Interface: Cursor IDE integrated chat
+
+Language used: C++ with MPI (mpi.h)
+
+Prompt: "Write a C++ MPI program that computes the dot product of two vectors of length N with P processes. Do local element-wise multiply and sum on each process, then implement your own tree reduction using only point-to-point sends/receives (no MPI_Reduce). Divide the data as equally as possible across ranks. Use MPI_Wtime to time the operation and easy-to-check data (e.g. 1.0 and 2.0) for correctness. Only rank 0 prints the result and expected value. Here is the problem that I was given: Problem 3 (15pts/12pts):
+Write a parallel vector-vector element by element multiplication program (by hand, no LLM) followed by
+a tree reduction to compute the dot-product of two vectors of length N with P processes using MPI. For
+instance, show with N = 1024, 2048, 4096 and P = 1, 2, 4. Use only point-to-point operations. Code your own tree reduction using sends and receives. Divide the data as equally as you can between your processes. We will discuss how to compute these partitions in class early next week (week of February 16). Use MPI Wtime() to measure the cost of the operation as you vary P and N.Use easy-to-evaluate data for testing in the vector elements for correctness testing (but not all zeroes)Problem 4 (15pts/12pts): Using your favorite LLM, vibe code Problem 3, and compare and contrast with what you developed by hand for correctness/functionality. Show the sequence of prompts you devised and applied, together the sequence of code produced, and the final product. If it is incorrect after several prompt rounds, please explain what the LLM seems to be getting wrong. Report what version and details of your LLM environment too."
+
+Cursor then created the CPP files in the directory
